@@ -1,0 +1,11 @@
+title Gestionar Camara
+Usuario -> UIGestionarCamara: Ingresar(ip,lugar)
+UIGestionarCamara -> Camara: new(ip,lugar)
+alt text1
+    A->B: text
+else text2
+    A->B: text
+end
+note over A,B: text1
+note left of A: text2
+
