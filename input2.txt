@@ -1,0 +1,36 @@
+UIGestionarCamara -> Camara: new(ip,lugar)
+alt text1
+    A->B: text
+else text2
+    A->B: text
+end
+note over A,B: text1
+note left of A: text2
+
+
+rules1 = {
+		0: (1,'$accept'),
+		1: (2, 'p'),
+		2: (7, 's'),
+		3: (6, 's'),
+		4: (6, 's'),
+		5: (5, 's'),
+		6: (9, 's'),
+		7: (6, 's'),
+		8: (2, 'ss'),
+		9: (1, 'ss'),
+		10: (3, 'tit')
+}
+rules2 = [
+		"$accept",
+		"p: tit ss",
+		"s: NOTE LEFT OF TEXT ':' TEXT '\n'",
+		"| TEXT '->' TEXT ':' TEXT '\n'",
+		"| LOOP TEXT '\n' ss END '\n'",
+		"| LOOP TEXT '\n' END '\n'",
+		"| ALT TEXT '\n' ss ELSE '\n' ss END '\n'",
+		"| ALT TEXT '\n' ss END '\n'",
+		"ss: s ss",
+		"| s",
+		"tit: TITLE TEXT '\n'"
+]

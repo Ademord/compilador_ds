@@ -4,7 +4,7 @@ import re
 Token = collections.namedtuple('Token', ['typ', 'value', 'line', 'column'])
 
 def tokenize(code):
-    keywords = {'Aa', 'ELSE', 'END', 'LEFT', 'LOOP', 'NOTE', 'OF', 'TITLE', 'NEWLINE'}
+    keywords = {'ALT', 'ELSE', 'END', 'LEFT', 'LOOP', 'NOTE', 'OF', 'TITLE', 'NEWLINE'}
     token_specification = [
         ('MENSAJE',     r'->'), # NEW MESSAGE A -> B
         ('CONTENT',     r':'),          # A -> B: CONTENT

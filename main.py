@@ -1,13 +1,13 @@
 import lexico
-
+import sintactico
 filename = 'input.txt'
 
 
 def main():
 	statements = open(filename).read()
-	# print (statements)
-	for token in lexico.tokenize(statements):
-		print(token)
+	tokens = list(lexico.tokenize(statements))
+	sintactico.analyze(tokens)
+
 
 if __name__ == "__main__":
     main()
