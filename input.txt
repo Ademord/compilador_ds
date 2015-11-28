@@ -1,8 +1,9 @@
-title Gestionar
-Usuario -> UIGestionarCamara: Ingresar(ip,lugar)
-Usuario -> UIGestionarCamara: Ingresar(ip,lugar)
+title prueba
+UIGestionarCamara -> Camara: new(ip,lugar)
+UIGestionarCamara -> Camara: new(ip,lugar)
 alt text1
     A->B: text
 else
     A->B: text
 end
+note left of A: text2
